@@ -100,12 +100,18 @@ class QuotesSpider(scrapy.Spider):
 			yield scrapy.Request(response.urljoin(link),headers=h,callback=self.parse_details)
 
 	def parse_details(self, response):    	
-		breadcrumbs=response.xpath('//div[@class="breadcrumbs"]//a/text()').getall()
+		breads=response.xpath('//div[@class="breadcrumbs"]//a/text()').getall()
+		breadcrumbs=[]
+		for b in breads:
+			breadcrumbs.append(b.strip())
+
 		image_url=response.xpath('//a[@class="cloud-zoom"]//@data-src').get()
 		brand=response.xpath('//div[@class="brand"]/a/span/text()').get()
 		product_name=response.xpath('//div[@class="product_name"]/span/text()').get()
-		price=response.xpath('//div[@class="price "]/text()').get()
-		reviews=response.xpath('//div[@class="pdp_info_reviewCount"]/text()')[1].get()
+		p=response.xpath('//div[@class="price "]/text()').get()
+		price=p.strip()
+		r=response.xpath('//div[@class="pdp_info_reviewCount"]/text()')[1].get()
+		reviews=r.strip()
 		color=response.xpath('//div[@class="product_color_title"]/span[@class="current"]/text()').get()
 		description=response.xpath('//div[@class="value"]/p/text()').get()
 		sku=response.xpath('//p[@class="pdp_tab_box_par"]/text()')[2].get()
