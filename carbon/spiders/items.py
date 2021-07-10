@@ -3,7 +3,7 @@ import scrapy
 
 class QuotesSpider(scrapy.Spider):
 
-	name = "items1"
+	name = "items"
         	
 	def start_requests(self):
 		h = {	
