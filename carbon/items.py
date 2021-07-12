@@ -6,7 +6,7 @@
 import scrapy
 
 
-class CarbonItem(scrapy.Item):
+class CarbonproductsItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass

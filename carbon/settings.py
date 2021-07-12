@@ -1,4 +1,4 @@
-# Scrapy settings for carbon project
+# Scrapy settings for carbonproducts project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -14,10 +14,11 @@ NEWSPIDER_MODULE = 'carbon.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'carbon (+http://www.yourdomain.com)'
+#USER_AGENT = 'carbonproducts (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
+
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -45,13 +46,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'carbon.middlewares.CarbonSpiderMiddleware': 543,
+#    'carbonproducts.middlewares.CarbonproductsSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'carbon.middlewares.CarbonDownloaderMiddleware': 543,
+#    'carbonproducts.middlewares.CarbonproductsDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -63,7 +64,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'carbon.pipelines.CarbonPipeline': 300,
+#    'carbonproducts.pipelines.CarbonproductsPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
